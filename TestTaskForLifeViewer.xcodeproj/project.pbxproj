@@ -21,6 +21,8 @@
 		8E23AB34245B44D10069DD05 /* MainScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB33245B44D10069DD05 /* MainScreenViewModelProtocol.swift */; };
 		8E23AB36245B54D80069DD05 /* MainScreenPhotoPickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB35245B54D80069DD05 /* MainScreenPhotoPickerExtension.swift */; };
 		8E23AB38245B55070069DD05 /* MainScreenCollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB37245B55070069DD05 /* MainScreenCollectionViewExtension.swift */; };
+		8E23AB3D245B63B20069DD05 /* PhotoWidgetCellScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB3C245B63B20069DD05 /* PhotoWidgetCellScrollViewExtension.swift */; };
+		8E23AB3F245B63EB0069DD05 /* PhotoWidgetAutoScrollExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB3E245B63EB0069DD05 /* PhotoWidgetAutoScrollExtension.swift */; };
 		A4A989A17672AD8E75372451 /* Pods_TestTaskForLifeViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28896037A46BEB0A792B6C25 /* Pods_TestTaskForLifeViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		8E23AB33245B44D10069DD05 /* MainScreenViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModelProtocol.swift; sourceTree = "<group>"; };
 		8E23AB35245B54D80069DD05 /* MainScreenPhotoPickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPhotoPickerExtension.swift; sourceTree = "<group>"; };
 		8E23AB37245B55070069DD05 /* MainScreenCollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewExtension.swift; sourceTree = "<group>"; };
+		8E23AB3C245B63B20069DD05 /* PhotoWidgetCellScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWidgetCellScrollViewExtension.swift; sourceTree = "<group>"; };
+		8E23AB3E245B63EB0069DD05 /* PhotoWidgetAutoScrollExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWidgetAutoScrollExtension.swift; sourceTree = "<group>"; };
 		BC705EB2D9FFCC44C6F51593 /* Pods-TestTaskForLifeViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTaskForLifeViewer.release.xcconfig"; path = "Target Support Files/Pods-TestTaskForLifeViewer/Pods-TestTaskForLifeViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +143,7 @@
 		8E23AB2B245B3B3F0069DD05 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				8E23AB2C245B3C3F0069DD05 /* PhotoWidgetCell.swift */,
+				8E23AB3A245B63720069DD05 /* PhotoWidgetCell */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -160,6 +164,24 @@
 				8E23AB35245B54D80069DD05 /* MainScreenPhotoPickerExtension.swift */,
 			);
 			path = ViewControllerExtension;
+			sourceTree = "<group>";
+		};
+		8E23AB3A245B63720069DD05 /* PhotoWidgetCell */ = {
+			isa = PBXGroup;
+			children = (
+				8E23AB2C245B3C3F0069DD05 /* PhotoWidgetCell.swift */,
+				8E23AB3B245B63880069DD05 /* PhotoWidgetCellExtensions */,
+			);
+			path = PhotoWidgetCell;
+			sourceTree = "<group>";
+		};
+		8E23AB3B245B63880069DD05 /* PhotoWidgetCellExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				8E23AB3C245B63B20069DD05 /* PhotoWidgetCellScrollViewExtension.swift */,
+				8E23AB3E245B63EB0069DD05 /* PhotoWidgetAutoScrollExtension.swift */,
+			);
+			path = PhotoWidgetCellExtensions;
 			sourceTree = "<group>";
 		};
 		A10ADC21E882B8312A2BD27F /* Pods */ = {
@@ -289,6 +311,7 @@
 				8E23AB29245B3AA80069DD05 /* MainScreenViewModel.swift in Sources */,
 				8E23AB23245B377D0069DD05 /* Colors.swift in Sources */,
 				8E23AB38245B55070069DD05 /* MainScreenCollectionViewExtension.swift in Sources */,
+				8E23AB3F245B63EB0069DD05 /* PhotoWidgetAutoScrollExtension.swift in Sources */,
 				8E23AB34245B44D10069DD05 /* MainScreenViewModelProtocol.swift in Sources */,
 				8E23AB0A245B349C0069DD05 /* SceneDelegate.swift in Sources */,
 				8E23AB1D245B366B0069DD05 /* MainScreenViewController.swift in Sources */,
@@ -297,6 +320,7 @@
 				8E23AB2D245B3C3F0069DD05 /* PhotoWidgetCell.swift in Sources */,
 				8E23AB36245B54D80069DD05 /* MainScreenPhotoPickerExtension.swift in Sources */,
 				8E23AB20245B36800069DD05 /* MainScreenView.swift in Sources */,
+				8E23AB3D245B63B20069DD05 /* PhotoWidgetCellScrollViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
