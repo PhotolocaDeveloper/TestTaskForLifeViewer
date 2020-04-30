@@ -1,8 +1,11 @@
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class MainScreenViewController: UIViewController {
-    private let contentView = MainScreenView()
-    private let viewModel = MainScreenViewModel()
+    let contentView = MainScreenView()
+    let viewModel = MainScreenViewModel()
+    let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +26,5 @@ final class MainScreenViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = contentView
-    }
-}
-
-extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoWidgetCell.cellId, for: indexPath) as? PhotoWidgetCell else {fatalError()}
-        return cell
     }
 }

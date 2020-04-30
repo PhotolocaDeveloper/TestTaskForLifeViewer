@@ -11,6 +11,9 @@ class PhotoWidgetCell: UICollectionViewCell {
     let titleLabel = UILabel()
     let cameraIconImageView = UIImageView()
     
+    private var type: PhotoWidgetCellState?
+    private var photos: [UIImage]?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = Colors.pinkColor
@@ -24,6 +27,15 @@ class PhotoWidgetCell: UICollectionViewCell {
         cameraIconImageView.image = Icons.cameraIcon
         cameraIconImageView.contentMode = .scaleAspectFit
         addSubview(cameraIconImageView)
+    }
+    
+    func setupCell(type: PhotoWidgetCellState) {
+        self.type = type
+    }
+    
+    func setupCell(type: PhotoWidgetCellState, photos: [UIImage]) {
+        self.type = type
+        self.photos = photos
     }
     
     required init?(coder: NSCoder) {
