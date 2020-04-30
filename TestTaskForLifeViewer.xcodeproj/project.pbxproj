@@ -3,27 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8E23AB08245B349C0069DD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB07245B349C0069DD05 /* AppDelegate.swift */; };
 		8E23AB0A245B349C0069DD05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB09245B349C0069DD05 /* SceneDelegate.swift */; };
-		8E23AB0C245B349C0069DD05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB0B245B349C0069DD05 /* ViewController.swift */; };
-		8E23AB0F245B349C0069DD05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E23AB0D245B349C0069DD05 /* Main.storyboard */; };
 		8E23AB11245B349E0069DD05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E23AB10245B349E0069DD05 /* Assets.xcassets */; };
 		8E23AB14245B349E0069DD05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E23AB12245B349E0069DD05 /* LaunchScreen.storyboard */; };
+		8E23AB1D245B366B0069DD05 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB1C245B366B0069DD05 /* MainScreenViewController.swift */; };
+		8E23AB20245B36800069DD05 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB1F245B36800069DD05 /* MainScreenView.swift */; };
+		8E23AB23245B377D0069DD05 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB22245B377D0069DD05 /* Colors.swift */; };
+		8E23AB25245B399D0069DD05 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB24245B399D0069DD05 /* Fonts.swift */; };
+		8E23AB29245B3AA80069DD05 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB28245B3AA80069DD05 /* MainScreenViewModel.swift */; };
+		8E23AB2D245B3C3F0069DD05 /* PhotoWidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB2C245B3C3F0069DD05 /* PhotoWidgetCell.swift */; };
+		8E23AB2F245B3D560069DD05 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB2E245B3D560069DD05 /* Icons.swift */; };
+		A4A989A17672AD8E75372451 /* Pods_TestTaskForLifeViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28896037A46BEB0A792B6C25 /* Pods_TestTaskForLifeViewer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18CBA607C629BFFF880008E1 /* Pods-TestTaskForLifeViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTaskForLifeViewer.debug.xcconfig"; path = "Target Support Files/Pods-TestTaskForLifeViewer/Pods-TestTaskForLifeViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		28896037A46BEB0A792B6C25 /* Pods_TestTaskForLifeViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTaskForLifeViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E23AB04245B349C0069DD05 /* TestTaskForLifeViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskForLifeViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E23AB07245B349C0069DD05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E23AB09245B349C0069DD05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E23AB0B245B349C0069DD05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E23AB0E245B349C0069DD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E23AB10245B349E0069DD05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E23AB13245B349E0069DD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E23AB15245B349E0069DD05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E23AB1C245B366B0069DD05 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		8E23AB1F245B36800069DD05 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		8E23AB22245B377D0069DD05 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8E23AB24245B399D0069DD05 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		8E23AB28245B3AA80069DD05 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		8E23AB2C245B3C3F0069DD05 /* PhotoWidgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWidgetCell.swift; sourceTree = "<group>"; };
+		8E23AB2E245B3D560069DD05 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		BC705EB2D9FFCC44C6F51593 /* Pods-TestTaskForLifeViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTaskForLifeViewer.release.xcconfig"; path = "Target Support Files/Pods-TestTaskForLifeViewer/Pods-TestTaskForLifeViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A989A17672AD8E75372451 /* Pods_TestTaskForLifeViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76CF5B286262A15C04799504 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28896037A46BEB0A792B6C25 /* Pods_TestTaskForLifeViewer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E23AAFB245B349C0069DD05 = {
 			isa = PBXGroup;
 			children = (
 				8E23AB06245B349C0069DD05 /* TestTaskForLifeViewer */,
 				8E23AB05245B349C0069DD05 /* Products */,
+				A10ADC21E882B8312A2BD27F /* Pods */,
+				76CF5B286262A15C04799504 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +81,69 @@
 		8E23AB06245B349C0069DD05 /* TestTaskForLifeViewer */ = {
 			isa = PBXGroup;
 			children = (
+				8E23AB2B245B3B3F0069DD05 /* CollectionViewCells */,
+				8E23AB27245B3A9D0069DD05 /* ViewModels */,
+				8E23AB21245B37760069DD05 /* Theme */,
+				8E23AB1B245B365F0069DD05 /* Screens */,
 				8E23AB07245B349C0069DD05 /* AppDelegate.swift */,
 				8E23AB09245B349C0069DD05 /* SceneDelegate.swift */,
-				8E23AB0B245B349C0069DD05 /* ViewController.swift */,
-				8E23AB0D245B349C0069DD05 /* Main.storyboard */,
 				8E23AB10245B349E0069DD05 /* Assets.xcassets */,
 				8E23AB12245B349E0069DD05 /* LaunchScreen.storyboard */,
 				8E23AB15245B349E0069DD05 /* Info.plist */,
 			);
 			path = TestTaskForLifeViewer;
+			sourceTree = "<group>";
+		};
+		8E23AB1B245B365F0069DD05 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8E23AB1E245B366E0069DD05 /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8E23AB1E245B366E0069DD05 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8E23AB1C245B366B0069DD05 /* MainScreenViewController.swift */,
+				8E23AB1F245B36800069DD05 /* MainScreenView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8E23AB21245B37760069DD05 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				8E23AB22245B377D0069DD05 /* Colors.swift */,
+				8E23AB24245B399D0069DD05 /* Fonts.swift */,
+				8E23AB2E245B3D560069DD05 /* Icons.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		8E23AB27245B3A9D0069DD05 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8E23AB28245B3AA80069DD05 /* MainScreenViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8E23AB2B245B3B3F0069DD05 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				8E23AB2C245B3C3F0069DD05 /* PhotoWidgetCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		A10ADC21E882B8312A2BD27F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18CBA607C629BFFF880008E1 /* Pods-TestTaskForLifeViewer.debug.xcconfig */,
+				BC705EB2D9FFCC44C6F51593 /* Pods-TestTaskForLifeViewer.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E23AB18245B349E0069DD05 /* Build configuration list for PBXNativeTarget "TestTaskForLifeViewer" */;
 			buildPhases = (
+				9576F1F4D55690AD1F923D26 /* [CP] Check Pods Manifest.lock */,
 				8E23AB00245B349C0069DD05 /* Sources */,
 				8E23AB01245B349C0069DD05 /* Frameworks */,
 				8E23AB02245B349C0069DD05 /* Resources */,
+				2EC887BB4A3228491646021D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +208,73 @@
 			files = (
 				8E23AB14245B349E0069DD05 /* LaunchScreen.storyboard in Resources */,
 				8E23AB11245B349E0069DD05 /* Assets.xcassets in Resources */,
-				8E23AB0F245B349C0069DD05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EC887BB4A3228491646021D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTaskForLifeViewer/Pods-TestTaskForLifeViewer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTaskForLifeViewer/Pods-TestTaskForLifeViewer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTaskForLifeViewer/Pods-TestTaskForLifeViewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9576F1F4D55690AD1F923D26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestTaskForLifeViewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E23AB00245B349C0069DD05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E23AB0C245B349C0069DD05 /* ViewController.swift in Sources */,
 				8E23AB08245B349C0069DD05 /* AppDelegate.swift in Sources */,
+				8E23AB29245B3AA80069DD05 /* MainScreenViewModel.swift in Sources */,
+				8E23AB23245B377D0069DD05 /* Colors.swift in Sources */,
 				8E23AB0A245B349C0069DD05 /* SceneDelegate.swift in Sources */,
+				8E23AB1D245B366B0069DD05 /* MainScreenViewController.swift in Sources */,
+				8E23AB2F245B3D560069DD05 /* Icons.swift in Sources */,
+				8E23AB25245B399D0069DD05 /* Fonts.swift in Sources */,
+				8E23AB2D245B3C3F0069DD05 /* PhotoWidgetCell.swift in Sources */,
+				8E23AB20245B36800069DD05 /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8E23AB0D245B349C0069DD05 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E23AB0E245B349C0069DD05 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E23AB12245B349E0069DD05 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +402,7 @@
 		};
 		8E23AB19245B349E0069DD05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18CBA607C629BFFF880008E1 /* Pods-TestTaskForLifeViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +421,7 @@
 		};
 		8E23AB1A245B349E0069DD05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC705EB2D9FFCC44C6F51593 /* Pods-TestTaskForLifeViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -6,5 +6,9 @@ target 'TestTaskForLifeViewer' do
   use_frameworks!
 
   # Pods for TestTaskForLifeViewer
+  pod 'PinLayout'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod "AlignedCollectionViewFlowLayout"
 
 end

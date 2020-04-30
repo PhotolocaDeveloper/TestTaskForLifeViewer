@@ -1,0 +1,34 @@
+PODS:
+  - AlignedCollectionViewFlowLayout (1.1.2)
+  - PinLayout (1.8.13)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+
+DEPENDENCIES:
+  - AlignedCollectionViewFlowLayout
+  - PinLayout
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
+
+SPEC REPOS:
+  trunk:
+    - AlignedCollectionViewFlowLayout
+    - PinLayout
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
+  PinLayout: e41a50260a76508b7a7fcee8955c76639adc69bc
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+
+PODFILE CHECKSUM: f6c4430ee20076f77d9e542518a27832f35a32db
+
+COCOAPODS: 1.9.1
