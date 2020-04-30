@@ -6,12 +6,17 @@ extension MainScreenViewController {
         YPImagePickerConfiguration.shared = getImagePickerConfig()
         let picker = YPImagePicker()
         picker.didFinishPicking { [unowned picker] items, _ in
-            var itemsToSave = [YPMediaPhoto]()
+            var itemsToSave: [YPMediaPhoto]?
             
             for mediaItem in items {
                 switch mediaItem {
                 case .photo(p: let photo):
-                    itemsToSave.append(photo)
+                    if itemsToSave == nil {
+                        itemsToSave = [YPMediaPhoto]()
+                        itemsToSave?.append(photo)
+                    } else {
+                        itemsToSave?.append(photo)
+                    }
                 case .video: continue
                 }
             }

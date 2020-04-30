@@ -90,24 +90,21 @@ class PhotoWidgetCell: UICollectionViewCell {
         //MARK: Show needed UI elemtns and hide unneeded
         titleLabel.isHidden = true
         cameraIconImageView.isHidden = true
-        
-        //MARK: Remove page controll when is only one image
-        if images.count > 1 {
-            pageControll.isHidden = false
-        } else {
-            pageControll.isHidden = true
-        }
-        
         scrollView.isHidden = false
-        
-        //MARK: Setup page controll
-        pageControll.currentPage = 0
-        pageControll.numberOfPages = images.count
         
         setupScrollView()
         
-        startPageScrollingTimer()
-        scrollView.rx.didEndDecelerating.bind(onNext: scrollViewScrolledByUser).disposed(by: bag)
+        //MARK: Remove page controll and animation setting up when is only one image in arr
+        if images.count > 1 {
+            pageControll.isHidden = false
+            pageControll.currentPage = 0
+            pageControll.numberOfPages = images.count
+            
+            startPageScrollingTimer()
+            scrollView.rx.didEndDecelerating.bind(onNext: scrollViewScrolledByUser).disposed(by: bag)
+        } else {
+            pageControll.isHidden = true
+        }
         
         layoutSubviews()
     }
@@ -117,9 +114,8 @@ class PhotoWidgetCell: UICollectionViewCell {
     private func setupScrollView() {
         guard let photos = self.photos else {return}
         
-        //MARK: Clear arrays
+        //MARK: Clear arrays of photos and subviews on scroll view 
         photosPages = []
-        
         scrollView.subviews.forEach { (view) in
             view.removeFromSuperview()
         }
