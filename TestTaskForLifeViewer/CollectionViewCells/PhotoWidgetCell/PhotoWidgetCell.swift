@@ -100,6 +100,9 @@ class PhotoWidgetCell: UICollectionViewCell {
             pageControll.currentPage = 0
             pageControll.numberOfPages = images.count
             
+            self.pageScrollingTimer.invalidate()
+            self.pageAutoScrollCounter = 0
+            
             startPageScrollingTimer()
             scrollView.rx.didEndDecelerating.bind(onNext: scrollViewScrolledByUser).disposed(by: bag)
         } else {

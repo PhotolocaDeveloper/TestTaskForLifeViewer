@@ -1,5 +1,13 @@
 PODS:
   - AlignedCollectionViewFlowLayout (1.1.2)
+  - AXPhotoViewer (1.7.1):
+    - AXPhotoViewer/Core (= 1.7.1)
+  - AXPhotoViewer/Core (1.7.1):
+    - AXStateButton (>= 1.1.3)
+    - FLAnimatedImage (>= 1.0.0)
+    - FLAnimatedImage-tvOS (>= 1.0.16)
+  - AXStateButton (1.1.4)
+  - FLAnimatedImage (1.0.12)
   - PinLayout (1.8.13)
   - PryntTrimmerView (4.0.0)
   - RxCocoa (5.1.1):
@@ -15,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - AlignedCollectionViewFlowLayout
+  - AXPhotoViewer (~> 1.7)
   - PinLayout
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
@@ -23,6 +32,9 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AlignedCollectionViewFlowLayout
+    - AXPhotoViewer
+    - AXStateButton
+    - FLAnimatedImage
     - PinLayout
     - PryntTrimmerView
     - RxCocoa
@@ -33,6 +45,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
+  AXPhotoViewer: f4b021c6e43b0b9dbc7b30cf8b9a4f577d0c1f51
+  AXStateButton: 6c515a433e37551505046429b5be04c12daa8c07
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   PinLayout: e41a50260a76508b7a7fcee8955c76639adc69bc
   PryntTrimmerView: 67e67573ffd4c073f1308effa66aefd0cfa667a0
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -41,6 +56,6 @@ SPEC CHECKSUMS:
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   YPImagePicker: accf310f9526641a84372c0ecf943547d9b1e52c
 
-PODFILE CHECKSUM: a1dcfa5269f7590b9ddbc4b8f5da7ea4fe275196
+PODFILE CHECKSUM: 2e6ebd6ea8a32c2ed5d95f158d3c571b5ade6cab
 
 COCOAPODS: 1.9.1

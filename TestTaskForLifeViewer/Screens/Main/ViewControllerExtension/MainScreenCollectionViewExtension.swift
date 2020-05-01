@@ -28,7 +28,7 @@ extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDa
         
         cell.setupDidTapAction {
             if let photos = photos, !photos.isEmpty {
-                
+                self.presentPhotoView()
             } else {
                 self.openImagePicker()
             }

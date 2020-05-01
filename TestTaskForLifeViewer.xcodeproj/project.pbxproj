@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E05C97C245B8FFA00E0827D /* MainScreenPhotoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05C97B245B8FFA00E0827D /* MainScreenPhotoPreview.swift */; };
 		8E23AB08245B349C0069DD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB07245B349C0069DD05 /* AppDelegate.swift */; };
 		8E23AB0A245B349C0069DD05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23AB09245B349C0069DD05 /* SceneDelegate.swift */; };
 		8E23AB11245B349E0069DD05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E23AB10245B349E0069DD05 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		18CBA607C629BFFF880008E1 /* Pods-TestTaskForLifeViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTaskForLifeViewer.debug.xcconfig"; path = "Target Support Files/Pods-TestTaskForLifeViewer/Pods-TestTaskForLifeViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		28896037A46BEB0A792B6C25 /* Pods_TestTaskForLifeViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTaskForLifeViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E05C97B245B8FFA00E0827D /* MainScreenPhotoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPhotoPreview.swift; sourceTree = "<group>"; };
 		8E23AB04245B349C0069DD05 /* TestTaskForLifeViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskForLifeViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E23AB07245B349C0069DD05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E23AB09245B349C0069DD05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				8E23AB37245B55070069DD05 /* MainScreenCollectionViewExtension.swift */,
 				8E23AB35245B54D80069DD05 /* MainScreenPhotoPickerExtension.swift */,
+				8E05C97B245B8FFA00E0827D /* MainScreenPhotoPreview.swift */,
 			);
 			path = ViewControllerExtension;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				8E23AB36245B54D80069DD05 /* MainScreenPhotoPickerExtension.swift in Sources */,
 				8E23AB20245B36800069DD05 /* MainScreenView.swift in Sources */,
 				8E23AB3D245B63B20069DD05 /* PhotoWidgetCellScrollViewExtension.swift in Sources */,
+				8E05C97C245B8FFA00E0827D /* MainScreenPhotoPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

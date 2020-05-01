@@ -1,5 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-TestTaskForLifeViewer/Pods-TestTaskForLifeViewer-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AXPhotoViewer/AXPhotoViewer.framework
+${BUILT_PRODUCTS_DIR}/AXStateButton/AXStateButton.framework
 ${BUILT_PRODUCTS_DIR}/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout.framework
+${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework
 ${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework
 ${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework

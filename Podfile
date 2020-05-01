@@ -11,5 +11,5 @@ target 'TestTaskForLifeViewer' do
   pod 'RxCocoa', '~> 5'
   pod 'YPImagePicker'
   pod "AlignedCollectionViewFlowLayout"
-
+  pod 'AXPhotoViewer', '~> 1.7'
 end
