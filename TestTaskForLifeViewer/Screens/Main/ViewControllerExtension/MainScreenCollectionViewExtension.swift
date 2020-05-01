@@ -29,10 +29,12 @@ extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDa
         }.disposed(by: self.bag)
         
         cell.setupDidTapAction {
-            if let photos = photos, !photos.isEmpty {
-                self.presentPhotoView()
-            } else {
-                self.openImagePicker()
+            DispatchQueue.main.async {
+                if let photos = photos, !photos.isEmpty {
+                    self.presentPhotoView()
+                } else {
+                    self.openImagePicker()
+                }
             }
         }
         

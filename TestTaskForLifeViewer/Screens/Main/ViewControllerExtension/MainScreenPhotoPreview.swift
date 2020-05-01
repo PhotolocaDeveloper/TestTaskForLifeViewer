@@ -1,15 +1,17 @@
 import UIKit
 import AXPhotoViewer
 
-extension MainScreenViewController: AXPhotosViewControllerDelegate {
+extension MainScreenViewController {
     
     func presentPhotoView() {
         guard let photos = self.viewModel.getPhotos() else {return}
+        
+        //MARK: Init Photo preview library with data source
         let axPhotos = prepearImageForAxPhotoViewer(images: photos)
         let dataSource = AXPhotosDataSource(photos: axPhotos)
         let photosViewController = AXPhotosViewController(dataSource: dataSource)
-        photosViewController.delegate = self
         
+        //MARK: Setup buttons
         let editButton = UIButton()
         editButton.setTitle("Edit", for: .normal)
         let editButtonItem = UIBarButtonItem(customView: editButton)
@@ -18,16 +20,22 @@ extension MainScreenViewController: AXPhotosViewControllerDelegate {
         closeButton.setTitle("Close", for: .normal)
         let closeButtonItem = UIBarButtonItem(customView: closeButton)
         
+        //MARK: Bind close button
         closeButton.rx.tap.bind { (_) in
             photosViewController.dismiss(animated: true)
         }.disposed(by: self.bag)
         
+        
+        //MARK: Bind to edit button
         editButton.rx.tap.bind { (_) in
+            //MARK: Present action sheet
             self.presentAlertController(photosViewController: photosViewController, addMorePhotos: {
                 photosViewController.dismiss(animated: true) { self.openImagePicker() }
             }) {
+                //MARK: Get current page index
                 let index = photosViewController.currentPhotoViewController?.pageIndex ?? 0
                 
+                //MARK: Delete image at index
                 self.viewModel.delete(imageAtIndex: index)
                 
                 let _photos = self.viewModel.getPhotos()
@@ -37,12 +45,22 @@ extension MainScreenViewController: AXPhotosViewControllerDelegate {
                     return
                 }
                 
+                //MARK: Get photos
                 let axPhotos = self.prepearImageForAxPhotoViewer(images: photos)
-                let dataSource = AXPhotosDataSource(photos: axPhotos)
-                photosViewController.dataSource = dataSource
                 
                 if photos.count == 1 {
+                    //MARK: Remove title if is ony one photo
                     photosViewController.overlayView.title = ""
+                    //MARK: Set data source
+                    let dataSource = AXPhotosDataSource(photos: axPhotos, initialPhotoIndex: 0)
+                    photosViewController.dataSource = dataSource
+                } else {
+                    //MARK: Get new index
+                    let newIndex = index - 1
+                    
+                    //MARK: Set data source
+                    let dataSource = AXPhotosDataSource(photos: axPhotos, initialPhotoIndex: newIndex)
+                    photosViewController.dataSource = dataSource
                 }
             }
         }.disposed(by: self.bag)
@@ -80,10 +98,14 @@ extension MainScreenViewController: AXPhotosViewControllerDelegate {
         var photos = [AXPhoto]()
         
         for image in images {
-            let axPhotoObj = AXPhoto(attributedTitle: nil, attributedDescription: nil, attributedCredit: nil, imageData: nil, image: image, url: nil)
-            photos.append(axPhotoObj)
+            photos.append(getPhoto(image: image))
         }
         
         return photos
+    }
+    
+    private func getPhoto(image: UIImage) -> AXPhoto {
+        let axPhotoObj = AXPhoto(attributedTitle: nil, attributedDescription: nil, attributedCredit: nil, imageData: nil, image: image, url: nil)
+        return axPhotoObj
     }
 }
