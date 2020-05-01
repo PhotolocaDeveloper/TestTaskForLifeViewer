@@ -1,13 +1,12 @@
 import UIKit
 import AXPhotoViewer
 
-extension MainScreenViewController: AXPhotosViewControllerDelegate {
+extension MainScreenViewController {
     func presentPhotoView() {
         guard let photos = self.viewModel.getPhotos() else {return}
         let axPhotos = prepearImageForAxPhotoViewer(images: photos)
         let dataSource = AXPhotosDataSource(photos: axPhotos)
         let photosViewController = AXPhotosViewController(dataSource: dataSource)
-        photosViewController.delegate = self
         
         let editButton = UIButton()
         editButton.setTitle("Edit", for: .normal)
@@ -25,8 +24,20 @@ extension MainScreenViewController: AXPhotosViewControllerDelegate {
             self.presentAlertController(photosViewController: photosViewController, addMorePhotos: {
                 photosViewController.dismiss(animated: true) { self.openImagePicker() }
             }) {
-                let index = self.viewModel.viewedPhotoIndex ?? 0
-                print("delte photo")
+                let index = photosViewController.currentPhotoViewController?.pageIndex ?? 0
+                
+                self.viewModel.delete(imageAtIndex: index)
+                
+                let _photos = self.viewModel.getPhotos()
+
+                guard let photos = _photos, photos.isEmpty == false else {
+                    photosViewController.dismiss(animated: true, completion: nil)
+                    return
+                }
+                
+                let axPhotos = self.prepearImageForAxPhotoViewer(images: photos)
+                let dataSource = AXPhotosDataSource(photos: axPhotos)
+                photosViewController.dataSource = dataSource
             }
         }.disposed(by: self.bag)
         
@@ -68,9 +79,5 @@ extension MainScreenViewController: AXPhotosViewControllerDelegate {
         }
         
         return photos
-    }
-    
-    func photosViewController(_ photosViewController: AXPhotosViewController, didNavigateTo photo: AXPhotoProtocol, at index: Int) {
-        viewModel.setPhotoIndex(index)
     }
 }

@@ -4,9 +4,7 @@ import RxCocoa
 import YPImagePicker
 
 class MainScreenViewModel: MainScreenViewModelProtocol {
-    
     var photos: BehaviorRelay<[YPMediaPhoto]?> = BehaviorRelay(value: nil)
-    var viewedPhotoIndex: Int?
     
     func setPhotos(photos: [YPMediaPhoto]?) {
         if let photos = photos {
@@ -26,13 +24,14 @@ class MainScreenViewModel: MainScreenViewModelProtocol {
         }
     }
     
-    func setPhotoIndex(_ index: Int) {
-        self.viewedPhotoIndex = index
-    }
-    
-    
-    func delete(images: UIImage) {
-        
+    func delete(imageAtIndex: Int) {
+        var photosRxValue = self.photos.value
+        photosRxValue?.remove(at: imageAtIndex)
+        if photosRxValue?.isEmpty ?? true {
+            self.photos.accept(nil)
+        } else {
+            self.photos.accept(photosRxValue)
+        }
     }
     
     func getPhotos() -> [UIImage]? {

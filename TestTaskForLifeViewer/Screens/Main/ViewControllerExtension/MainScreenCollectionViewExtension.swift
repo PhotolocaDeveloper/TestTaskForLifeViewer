@@ -10,15 +10,17 @@ extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoWidgetCell.cellId, for: indexPath) as? PhotoWidgetCell else {fatalError()}
         
-        let photos = viewModel.getPhotos()
+        var photos = viewModel.getPhotos()
         
-        if photos == nil || photos?.isEmpty == true {
+        if let photos = photos, !photos.isEmpty {
+            cell.setupWithPhoto(images: photos)
+        } else {
             cell.setupEmptyPhoto()
         }
         
         viewModel.photos.asObservable().observeOn(MainScheduler.instance).bind { (mediaItem) in
-            guard mediaItem != nil else {return}
-            let photos = self.viewModel.getPhotos()
+            photos = self.viewModel.getPhotos()
+            
             if let photos = photos, !photos.isEmpty {
                 cell.setupWithPhoto(images: photos)
             } else {
