@@ -32,6 +32,7 @@ final class MainScreenView: UIView {
         addSubview(dateLabel)
         
         widgetsCollectionView.backgroundColor = Colors.whiteColor
+        widgetsCollectionView.register(PhotoWidgetCell.self, forCellWithReuseIdentifier: PhotoWidgetCell.cellId)
         addSubview(widgetsCollectionView)
     }
     

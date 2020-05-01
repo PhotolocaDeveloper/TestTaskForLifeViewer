@@ -17,7 +17,6 @@ final class MainScreenViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-        contentView.widgetsCollectionView.register(PhotoWidgetCell.self, forCellWithReuseIdentifier: PhotoWidgetCell.cellId)
         contentView.widgetsCollectionView.delegate = self
         contentView.widgetsCollectionView.dataSource = self
         contentView.widgetsCollectionView.reloadData()
