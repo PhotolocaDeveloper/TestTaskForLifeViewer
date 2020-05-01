@@ -22,7 +22,9 @@ extension MainScreenViewController {
         
         //MARK: Bind close button
         closeButton.rx.tap.bind { (_) in
-            photosViewController.dismiss(animated: true)
+            DispatchQueue.main.async {
+                photosViewController.dismiss(animated: true)
+            }
         }.disposed(by: self.bag)
         
         
@@ -30,7 +32,9 @@ extension MainScreenViewController {
         editButton.rx.tap.bind { (_) in
             //MARK: Present action sheet
             self.presentAlertController(photosViewController: photosViewController, addMorePhotos: {
-                photosViewController.dismiss(animated: true) { self.openImagePicker() }
+                DispatchQueue.main.async {
+                    photosViewController.dismiss(animated: true) { self.openImagePicker() }
+                }
             }) {
                 //MARK: Get current page index
                 let index = photosViewController.currentPhotoViewController?.pageIndex ?? 0
@@ -41,7 +45,9 @@ extension MainScreenViewController {
                 let _photos = self.viewModel.getPhotos()
 
                 guard let photos = _photos, photos.isEmpty == false else {
-                    photosViewController.dismiss(animated: true, completion: nil)
+                    DispatchQueue.main.async {
+                        photosViewController.dismiss(animated: true, completion: nil)
+                    }
                     return
                 }
                 
@@ -68,7 +74,9 @@ extension MainScreenViewController {
         photosViewController.overlayView.rightBarButtonItem? = editButtonItem
         photosViewController.overlayView.leftBarButtonItem? = closeButtonItem
         
-        self.present(photosViewController, animated: true)
+        DispatchQueue.main.async {
+            self.present(photosViewController, animated: true)
+        }
     }
     
     private func presentAlertController(
@@ -91,7 +99,9 @@ extension MainScreenViewController {
         alertController.addAction(deleteThisPhoto)
         alertController.addAction(closeAction)
         
-        photosViewController.present(alertController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            photosViewController.present(alertController, animated: true, completion: nil)
+        }
     }
     
     private func prepearImageForAxPhotoViewer(images: [UIImage]) -> [AXPhoto] {
