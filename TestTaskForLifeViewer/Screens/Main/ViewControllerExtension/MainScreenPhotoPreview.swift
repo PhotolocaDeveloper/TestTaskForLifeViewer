@@ -1,12 +1,14 @@
 import UIKit
 import AXPhotoViewer
 
-extension MainScreenViewController {
+extension MainScreenViewController: AXPhotosViewControllerDelegate {
+    
     func presentPhotoView() {
         guard let photos = self.viewModel.getPhotos() else {return}
         let axPhotos = prepearImageForAxPhotoViewer(images: photos)
         let dataSource = AXPhotosDataSource(photos: axPhotos)
         let photosViewController = AXPhotosViewController(dataSource: dataSource)
+        photosViewController.delegate = self
         
         let editButton = UIButton()
         editButton.setTitle("Edit", for: .normal)
@@ -38,6 +40,10 @@ extension MainScreenViewController {
                 let axPhotos = self.prepearImageForAxPhotoViewer(images: photos)
                 let dataSource = AXPhotosDataSource(photos: axPhotos)
                 photosViewController.dataSource = dataSource
+                
+                if photos.count == 1 {
+                    photosViewController.overlayView.title = ""
+                }
             }
         }.disposed(by: self.bag)
         
